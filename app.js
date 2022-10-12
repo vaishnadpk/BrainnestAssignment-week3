@@ -37,7 +37,7 @@ function game() {
 
   if (playerWinCount > computerWinCount) {
     console.log("Player wins");
-    document.getElementById("win").innerHTML = "You are the Winner...!!!🥳🎊🎊";
+    document.getElementById("win").innerHTML = "You are the Winner..!!!🥳🎊🎊";
   } else if (playerWinCount === computerWinCount) {
     console.log("Its a Tie");
     document.getElementById("win").innerHTML = "Its a Tie 🤪";
