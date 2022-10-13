@@ -24,12 +24,16 @@ function playRound(playSelection, computerSelection) {
 
 function game() {
   for (i = 0; i < 5; i++) {
-    const playerSelection = prompt(
+    let playerSelection = prompt(
       `Pick anyone among : 'Rock ⛰ , Paper 📄 , Scissors ✂️ `
-    ).toLowerCase();
-    const computerSelection = computerPlay();
-
-    console.log(playRound(playerSelection, computerSelection));
+    );
+    if (playerSelection === null) {
+      alert("Its too bad.Play the game");
+    } else {
+      playerSelection = playerSelection.trim().toLowerCase();
+      let computerSelection = computerPlay();
+      console.log(playRound(playerSelection, computerSelection));
+    }
   }
 
   let playerWinCount = playerGameCount - tieCount;
