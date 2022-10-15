@@ -30,7 +30,10 @@ function game() {
     let playerSelection = prompt(
       `Pick anyone among : 'Rock ⛰ , Paper 📄 , Scissors ✂️ `
     );
-    if (playerSelection === null || !randomPick.includes(playerSelection)) {
+    if (
+      playerSelection === null ||
+      !randomPick.includes(playerSelection.trim().toLowerCase())
+    ) {
       alert("Its too bad.Play the game");
       i--;
     } else {
@@ -45,12 +48,9 @@ function game() {
 
   if (playerWinCount > computerWinCount) {
     console.log("Player wins");
-    document.getElementById("win").innerHTML = "You are the Winner..!!!🥳🎊🎊";
   } else if (playerWinCount === computerWinCount) {
     console.log("Its a Tie");
-    document.getElementById("win").innerHTML = "Its a Tie 🤪";
   } else {
     console.log("Computer wins");
-    document.getElementById("win").innerHTML = "You lose...😫";
   }
 }
