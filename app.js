@@ -23,6 +23,9 @@ function playRound(playSelection, computerSelection) {
 }
 
 function game() {
+  alert(
+    "Start the Game by selecting rock,paper,or scissors.The Rules are:Rock beats Scissors,Paper beats Rock and Scissors beats Paper"
+  );
   for (i = 0; i < 5; i++) {
     let playerSelection = prompt(
       `Pick anyone among : 'Rock ⛰ , Paper 📄 , Scissors ✂️ `
