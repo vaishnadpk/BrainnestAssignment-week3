@@ -29,6 +29,7 @@ function game() {
     );
     if (playerSelection === null || !randomPick.includes(playerSelection)) {
       alert("Its too bad.Play the game");
+      i--;
     } else {
       playerSelection = playerSelection.trim().toLowerCase();
       let computerSelection = computerPlay();
