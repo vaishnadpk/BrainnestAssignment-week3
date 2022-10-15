@@ -1,9 +1,9 @@
 let playerGameCount = 5;
 let computerGameCount = 5;
 let tieCount = 0;
+const randomPick = ["rock", "paper", "scissors"];
 
 function computerPlay() {
-  const randomPick = ["rock", "paper", "scissors"];
   return randomPick[Math.floor(Math.random() * randomPick.length)];
 }
 function playRound(playSelection, computerSelection) {
@@ -27,7 +27,7 @@ function game() {
     let playerSelection = prompt(
       `Pick anyone among : 'Rock ⛰ , Paper 📄 , Scissors ✂️ `
     );
-    if (playerSelection === null) {
+    if (playerSelection === null || !randomPick.includes(playerSelection)) {
       alert("Its too bad.Play the game");
     } else {
       playerSelection = playerSelection.trim().toLowerCase();
