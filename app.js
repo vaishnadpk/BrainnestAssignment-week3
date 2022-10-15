@@ -34,6 +34,7 @@ function game() {
       playerSelection === null ||
       !randomPick.includes(playerSelection.trim().toLowerCase())
     ) {
+      console.log("Invalid / No Entry");
       alert("Its too bad.Play the game");
       i--;
     } else {
