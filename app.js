@@ -51,5 +51,3 @@ function game() {
     document.getElementById("win").innerHTML = "You lose...😫";
   }
 }
-
-game();
